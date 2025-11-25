@@ -90,7 +90,6 @@ C:\Users\rodri\source\repos\WebBiblioteca\obj\Debug\net9.0\staticwebassets.build
 C:\Users\rodri\source\repos\WebBiblioteca\obj\Debug\net9.0\staticwebassets.build.json.cache
 C:\Users\rodri\source\repos\WebBiblioteca\obj\Debug\net9.0\staticwebassets.development.json
 C:\Users\rodri\source\repos\WebBiblioteca\obj\Debug\net9.0\staticwebassets.build.endpoints.json
-C:\Users\rodri\source\repos\WebBiblioteca\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\rodri\source\repos\WebBiblioteca\obj\Debug\net9.0\WebBiblioteca.dll
 C:\Users\rodri\source\repos\WebBiblioteca\obj\Debug\net9.0\refint\WebBiblioteca.dll
 C:\Users\rodri\source\repos\WebBiblioteca\obj\Debug\net9.0\WebBiblioteca.pdb
