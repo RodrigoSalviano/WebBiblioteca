@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\rodri\\source\\repos\\WebBiblioteca\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{977D10C3-C12A-4956-901A-4A00D947977E}|WebBiblioteca.csproj|c:\\users\\rodri\\source\\repos\\webbiblioteca\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{977D10C3-C12A-4956-901A-4A00D947977E}|WebBiblioteca.csproj|solutionrelative:models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{977D10C3-C12A-4956-901A-4A00D947977E}|WebBiblioteca.csproj|c:\\users\\rodri\\source\\repos\\webbiblioteca\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{977D10C3-C12A-4956-901A-4A00D947977E}|WebBiblioteca.csproj|solutionrelative:controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{977D10C3-C12A-4956-901A-4A00D947977E}|WebBiblioteca.csproj|c:\\users\\rodri\\source\\repos\\webbiblioteca\\controllers\\livroscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,26 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{977D10C3-C12A-4956-901A-4A00D947977E}|WebBiblioteca.csproj|c:\\users\\rodri\\source\\repos\\webbiblioteca\\controllers\\autorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{977D10C3-C12A-4956-901A-4A00D947977E}|WebBiblioteca.csproj|solutionrelative:controllers\\autorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{977D10C3-C12A-4956-901A-4A00D947977E}|WebBiblioteca.csproj|c:\\users\\rodri\\source\\repos\\webbiblioteca\\models\\livros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{977D10C3-C12A-4956-901A-4A00D947977E}|WebBiblioteca.csproj|solutionrelative:models\\livros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{977D10C3-C12A-4956-901A-4A00D947977E}|WebBiblioteca.csproj|c:\\users\\rodri\\source\\repos\\webbiblioteca\\models\\editora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{977D10C3-C12A-4956-901A-4A00D947977E}|WebBiblioteca.csproj|solutionrelative:models\\editora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{977D10C3-C12A-4956-901A-4A00D947977E}|WebBiblioteca.csproj|c:\\users\\rodri\\source\\repos\\webbiblioteca\\models\\autores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{977D10C3-C12A-4956-901A-4A00D947977E}|WebBiblioteca.csproj|solutionrelative:models\\autores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{977D10C3-C12A-4956-901A-4A00D947977E}|WebBiblioteca.csproj|c:\\users\\rodri\\source\\repos\\webbiblioteca\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{977D10C3-C12A-4956-901A-4A00D947977E}|WebBiblioteca.csproj|solutionrelative:controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{977D10C3-C12A-4956-901A-4A00D947977E}|WebBiblioteca.csproj|c:\\users\\rodri\\source\\repos\\webbiblioteca\\models\\contexto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{977D10C3-C12A-4956-901A-4A00D947977E}|WebBiblioteca.csproj|solutionrelative:models\\contexto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{977D10C3-C12A-4956-901A-4A00D947977E}|WebBiblioteca.csproj|c:\\users\\rodri\\source\\repos\\webbiblioteca\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -54,11 +34,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsuariosController.cs",
+              "DocumentMoniker": "C:\\Users\\rodri\\source\\repos\\WebBiblioteca\\Controllers\\UsuariosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsuariosController.cs",
+              "ToolTip": "C:\\Users\\rodri\\source\\repos\\WebBiblioteca\\Controllers\\UsuariosController.cs",
+              "RelativeToolTip": "Controllers\\UsuariosController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T15:16:45.647Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -70,8 +63,7 @@
               "RelativeToolTip": "Controllers\\LivrosController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T03:17:15.8Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-26T15:16:14.127Z"
             },
             {
               "$type": "Document",
@@ -83,7 +75,7 @@
               "RelativeToolTip": "Controllers\\EditorasController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T03:16:43.284Z"
+              "WhenOpened": "2025-11-26T15:15:40.519Z"
             },
             {
               "$type": "Document",
@@ -95,84 +87,11 @@
               "RelativeToolTip": "Controllers\\AutoresController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T03:15:56.941Z"
+              "WhenOpened": "2025-11-26T15:15:00.542Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Livros.cs",
-              "DocumentMoniker": "C:\\Users\\rodri\\source\\repos\\WebBiblioteca\\Models\\Livros.cs",
-              "RelativeDocumentMoniker": "Models\\Livros.cs",
-              "ToolTip": "C:\\Users\\rodri\\source\\repos\\WebBiblioteca\\Models\\Livros.cs",
-              "RelativeToolTip": "Models\\Livros.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAwwB0AAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T03:11:15.56Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Editora.cs",
-              "DocumentMoniker": "C:\\Users\\rodri\\source\\repos\\WebBiblioteca\\Models\\Editora.cs",
-              "RelativeDocumentMoniker": "Models\\Editora.cs",
-              "ToolTip": "C:\\Users\\rodri\\source\\repos\\WebBiblioteca\\Models\\Editora.cs",
-              "RelativeToolTip": "Models\\Editora.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T03:10:20.146Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Autores.cs",
-              "DocumentMoniker": "C:\\Users\\rodri\\source\\repos\\WebBiblioteca\\Models\\Autores.cs",
-              "RelativeDocumentMoniker": "Models\\Autores.cs",
-              "ToolTip": "C:\\Users\\rodri\\source\\repos\\WebBiblioteca\\Models\\Autores.cs",
-              "RelativeToolTip": "Models\\Autores.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T03:09:14.76Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UsuariosController.cs",
-              "DocumentMoniker": "C:\\Users\\rodri\\source\\repos\\WebBiblioteca\\Controllers\\UsuariosController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UsuariosController.cs",
-              "ToolTip": "C:\\Users\\rodri\\source\\repos\\WebBiblioteca\\Controllers\\UsuariosController.cs",
-              "RelativeToolTip": "Controllers\\UsuariosController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T03:03:00.825Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\rodri\\source\\repos\\WebBiblioteca\\Models\\Usuario.cs",
-              "RelativeDocumentMoniker": "Models\\Usuario.cs",
-              "ToolTip": "C:\\Users\\rodri\\source\\repos\\WebBiblioteca\\Models\\Usuario.cs",
-              "RelativeToolTip": "Models\\Usuario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T02:58:37.92Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Contexto.cs",
-              "DocumentMoniker": "C:\\Users\\rodri\\source\\repos\\WebBiblioteca\\Models\\Contexto.cs",
-              "RelativeDocumentMoniker": "Models\\Contexto.cs",
-              "ToolTip": "C:\\Users\\rodri\\source\\repos\\WebBiblioteca\\Models\\Contexto.cs",
-              "RelativeToolTip": "Models\\Contexto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T23:06:51.843Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\rodri\\source\\repos\\WebBiblioteca\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -184,7 +103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\rodri\\source\\repos\\WebBiblioteca\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",

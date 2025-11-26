@@ -16,7 +16,16 @@ namespace WebBiblioteca.Models
         public string nome { get; set; }
         [StringLength(30)]
         [Display(Name = "Nacionalidade")]
+        [Required]
         public string nacionalidade { get; set; }
+
+        [Display(Name = "Editora")]
+        public int editoraID { get; set; }
+        [ForeignKey("editoraID")]
+        public virtual Editora Editora { get; set; }
+
+        [Display(Name = "Lista de Autores")]
+        public List<Autores> listaAutores{ get; set; }
 
         public Autores() { }
     }
