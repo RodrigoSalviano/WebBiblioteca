@@ -30,6 +30,11 @@ namespace WebBiblioteca.Models
         [Required]
         public int qtd { get; set; }
 
+        [Display(Name = "Autor")]
+        public int AutorId { get; set; }
+        [ForeignKey("AutorId")]
+        public virtual Autores Autor { get; set; }
+
         public Livros() { }
 
         public Livros(int paginas)

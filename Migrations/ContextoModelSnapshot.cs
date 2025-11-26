@@ -29,7 +29,14 @@ namespace WebBiblioteca.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
 
+                    b.Property<int?>("Autoresid")
+                        .HasColumnType("int");
+
+                    b.Property<int>("editoraID")
+                        .HasColumnType("int");
+
                     b.Property<string>("nacionalidade")
+                        .IsRequired()
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
 
@@ -39,6 +46,10 @@ namespace WebBiblioteca.Migrations
                         .HasColumnType("nvarchar(70)");
 
                     b.HasKey("id");
+
+                    b.HasIndex("Autoresid");
+
+                    b.HasIndex("editoraID");
 
                     b.ToTable("Autores");
                 });
@@ -51,12 +62,17 @@ namespace WebBiblioteca.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
 
+                    b.Property<int?>("Editoraid")
+                        .HasColumnType("int");
+
                     b.Property<string>("nome")
                         .IsRequired()
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
 
                     b.HasKey("id");
+
+                    b.HasIndex("Editoraid");
 
                     b.ToTable("Editora");
                 });
@@ -68,6 +84,9 @@ namespace WebBiblioteca.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+
+                    b.Property<int>("AutorId")
+                        .HasColumnType("int");
 
                     b.Property<int>("Paginas")
                         .HasColumnType("int");
@@ -94,6 +113,8 @@ namespace WebBiblioteca.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("id");
+
+                    b.HasIndex("AutorId");
 
                     b.ToTable("Livros");
                 });
@@ -128,6 +149,49 @@ namespace WebBiblioteca.Migrations
                     b.HasKey("id");
 
                     b.ToTable("Usuarios");
+                });
+
+            modelBuilder.Entity("WebBiblioteca.Models.Autores", b =>
+                {
+                    b.HasOne("WebBiblioteca.Models.Autores", null)
+                        .WithMany("listaAutores")
+                        .HasForeignKey("Autoresid");
+
+                    b.HasOne("WebBiblioteca.Models.Editora", "Editora")
+                        .WithMany()
+                        .HasForeignKey("editoraID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Editora");
+                });
+
+            modelBuilder.Entity("WebBiblioteca.Models.Editora", b =>
+                {
+                    b.HasOne("WebBiblioteca.Models.Editora", null)
+                        .WithMany("listaEditora")
+                        .HasForeignKey("Editoraid");
+                });
+
+            modelBuilder.Entity("WebBiblioteca.Models.Livros", b =>
+                {
+                    b.HasOne("WebBiblioteca.Models.Autores", "Autor")
+                        .WithMany()
+                        .HasForeignKey("AutorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Autor");
+                });
+
+            modelBuilder.Entity("WebBiblioteca.Models.Autores", b =>
+                {
+                    b.Navigation("listaAutores");
+                });
+
+            modelBuilder.Entity("WebBiblioteca.Models.Editora", b =>
+                {
+                    b.Navigation("listaEditora");
                 });
 #pragma warning restore 612, 618
         }

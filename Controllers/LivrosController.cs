@@ -21,7 +21,8 @@ namespace WebBiblioteca.Controllers
         // GET: Livros
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Livros.ToListAsync());
+            var contexto = _context.Livros.Include(l => l.Autor);
+            return View(await contexto.ToListAsync());
         }
 
         // GET: Livros/Details/5
@@ -33,6 +34,7 @@ namespace WebBiblioteca.Controllers
             }
 
             var livros = await _context.Livros
+                .Include(l => l.Autor)
                 .FirstOrDefaultAsync(m => m.id == id);
             if (livros == null)
             {
@@ -45,6 +47,7 @@ namespace WebBiblioteca.Controllers
         // GET: Livros/Create
         public IActionResult Create()
         {
+            ViewData["AutorId"] = new SelectList(_context.Autores, "id", "nacionalidade");
             return View();
         }
 
@@ -53,7 +56,7 @@ namespace WebBiblioteca.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("id,titulo,volume,genero,Paginas,publicacao,qtd")] Livros livros)
+        public async Task<IActionResult> Create([Bind("id,titulo,volume,genero,Paginas,publicacao,qtd,AutorId")] Livros livros)
         {
             if (ModelState.IsValid)
             {
@@ -61,6 +64,7 @@ namespace WebBiblioteca.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["AutorId"] = new SelectList(_context.Autores, "id", "nacionalidade", livros.AutorId);
             return View(livros);
         }
 
@@ -77,6 +81,7 @@ namespace WebBiblioteca.Controllers
             {
                 return NotFound();
             }
+            ViewData["AutorId"] = new SelectList(_context.Autores, "id", "nacionalidade", livros.AutorId);
             return View(livros);
         }
 
@@ -85,7 +90,7 @@ namespace WebBiblioteca.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("id,titulo,volume,genero,Paginas,publicacao,qtd")] Livros livros)
+        public async Task<IActionResult> Edit(int id, [Bind("id,titulo,volume,genero,Paginas,publicacao,qtd,AutorId")] Livros livros)
         {
             if (id != livros.id)
             {
@@ -112,6 +117,7 @@ namespace WebBiblioteca.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["AutorId"] = new SelectList(_context.Autores, "id", "nacionalidade", livros.AutorId);
             return View(livros);
         }
 
@@ -124,6 +130,7 @@ namespace WebBiblioteca.Controllers
             }
 
             var livros = await _context.Livros
+                .Include(l => l.Autor)
                 .FirstOrDefaultAsync(m => m.id == id);
             if (livros == null)
             {
