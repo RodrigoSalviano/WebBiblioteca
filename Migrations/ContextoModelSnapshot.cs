@@ -29,8 +29,13 @@ namespace WebBiblioteca.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
 
-                    b.Property<string>("Nome")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<string>("nacionalidade")
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<string>("nome")
+                        .HasMaxLength(70)
+                        .HasColumnType("nvarchar(70)");
 
                     b.HasKey("id");
 
@@ -46,10 +51,8 @@ namespace WebBiblioteca.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
 
                     b.Property<string>("nome")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("publicacao")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.HasKey("id");
 
@@ -68,13 +71,22 @@ namespace WebBiblioteca.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("genero")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<string>("publicacao")
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<int>("qtd")
                         .HasColumnType("int");
 
                     b.Property<string>("titulo")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(120)
+                        .HasColumnType("nvarchar(120)");
+
+                    b.Property<int>("volume")
+                        .HasColumnType("int");
 
                     b.HasKey("id");
 
