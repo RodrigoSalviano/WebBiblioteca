@@ -15,9 +15,6 @@ namespace WebBiblioteca.Models
         [Required]
         public string nome { get; set; }
 
-        [Display(Name = "Lista de Editoras")]
-        public List<Editora> listaEditora { get; set; }
-
         public Editora() { }
 
     }

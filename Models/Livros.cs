@@ -34,6 +34,8 @@ namespace WebBiblioteca.Models
         public int AutorId { get; set; }
         [ForeignKey("AutorId")]
         public virtual Autores Autor { get; set; }
+        [Display(Name = "Lista de Autores")]
+        public List<Autores> listaAutores { get; set; }
 
         public Livros() { }
 
