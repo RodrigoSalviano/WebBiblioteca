@@ -10,5 +10,6 @@ namespace WebBiblioteca.Models
         public DbSet<Livros> Livros { get; set; }
         public DbSet<Autores> Autores { get; set; }
         public DbSet<Editora> Editora { get; set; }
+        public DbSet<Usuario> Usuario { get; set; }
     }
 }
