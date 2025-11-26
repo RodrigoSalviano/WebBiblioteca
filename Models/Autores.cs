@@ -24,8 +24,8 @@ namespace WebBiblioteca.Models
         [ForeignKey("editoraID")]
         public virtual Editora Editora { get; set; }
 
-        [Display(Name = "Lista de Autores")]
-        public List<Autores> listaAutores{ get; set; }
+        [Display(Name = "Lista de Editoras")]
+        public List<Editora> listaEditora { get; set; }
 
         public Autores() { }
     }

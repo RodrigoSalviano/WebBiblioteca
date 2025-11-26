@@ -335,4 +335,3 @@ C:\Users\rodri\source\repos\WebBiblioteca\bin\Debug\net9.0\ru\Microsoft.CodeAnal
 C:\Users\rodri\source\repos\WebBiblioteca\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\rodri\source\repos\WebBiblioteca\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\rodri\source\repos\WebBiblioteca\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
-C:\Users\rodri\source\repos\WebBiblioteca\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
