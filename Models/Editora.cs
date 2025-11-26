@@ -11,6 +11,8 @@ namespace WebBiblioteca.Models
         public int id { get; set; }
 
         [StringLength(30)]
+        [Display(Name = "Nome da Editora")]
+        [Required]
         public string nome { get; set; }
         
         public Editora() { }

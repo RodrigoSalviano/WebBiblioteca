@@ -10,8 +10,12 @@ namespace WebBiblioteca.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id { get; set; }
         [StringLength(70)]
+
+        [Display(Name = "Nome do Autor")]
+        [Required]
         public string nome { get; set; }
         [StringLength(30)]
+        [Display(Name = "Nacionalidade")]
         public string nacionalidade { get; set; }
 
         public Autores() { }
