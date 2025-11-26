@@ -6,6 +6,12 @@ namespace WebBiblioteca.Models
     [Table("Usuarios")]
     public class Usuario
     {
+        public enum NivelAcesso
+        {
+            Administrador,
+            UsuarioComum
+        }
+
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)] 
         public int id { get; set; }
@@ -18,8 +24,10 @@ namespace WebBiblioteca.Models
         [StringLength(100)]
         [Required]
         public string senha { get; set; }
+        
+        [Display(Name = "Nível de Acesso")]
         [Required]
-        public string acesso { get; set; }
+        public NivelAcesso acesso { get; set; }
 
         public Usuario() { }
     }
