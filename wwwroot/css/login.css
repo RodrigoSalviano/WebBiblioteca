@@ -1,0 +1,4 @@
+.login-box{width:340px;margin:60px auto;padding:30px;
+border-radius:20px;background:linear-gradient(135deg,#0ab1a7,#4b3b87);color:#fff;text-align:center;}
+input{width:100%;background:#f1f1f1;border:none;border-radius:25px;padding:10px;margin-top:8px;margin-bottom:15px;}
+.btn-login{width:100%;padding:10px;border:none;border-radius:25px;background:#4cb2ff;color:#fff;font-weight:bold;}
