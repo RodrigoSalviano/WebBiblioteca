@@ -16,33 +16,25 @@ namespace WebBiblioteca.Migrations
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    nome = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
-                    Editoraid = table.Column<int>(type: "int", nullable: true)
+                    nome = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Editora", x => x.id);
-                    table.ForeignKey(
-                        name: "FK_Editora_Editora_Editoraid",
-                        column: x => x.Editoraid,
-                        principalTable: "Editora",
-                        principalColumn: "id");
                 });
 
             migrationBuilder.CreateTable(
-                name: "Usuarios",
+                name: "LoginViewModels",
                 columns: table => new
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    nome = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    email = table.Column<string>(type: "nvarchar(120)", maxLength: 120, nullable: false),
-                    senha = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    acesso = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Username = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Usuarios", x => x.id);
+                    table.PrimaryKey("PK_LoginViewModels", x => x.id);
                 });
 
             migrationBuilder.CreateTable(
@@ -53,17 +45,11 @@ namespace WebBiblioteca.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     nome = table.Column<string>(type: "nvarchar(70)", maxLength: 70, nullable: false),
                     nacionalidade = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
-                    editoraID = table.Column<int>(type: "int", nullable: false),
-                    Autoresid = table.Column<int>(type: "int", nullable: true)
+                    editoraID = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Autores", x => x.id);
-                    table.ForeignKey(
-                        name: "FK_Autores_Autores_Autoresid",
-                        column: x => x.Autoresid,
-                        principalTable: "Autores",
-                        principalColumn: "id");
                     table.ForeignKey(
                         name: "FK_Autores_Editora_editoraID",
                         column: x => x.editoraID,
@@ -79,7 +65,7 @@ namespace WebBiblioteca.Migrations
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     titulo = table.Column<string>(type: "nvarchar(120)", maxLength: 120, nullable: false),
-                    volume = table.Column<int>(type: "int", maxLength: 3, nullable: false),
+                    volume = table.Column<int>(type: "int", nullable: false),
                     genero = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
                     Paginas = table.Column<int>(type: "int", nullable: false),
                     publicacao = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: true),
@@ -98,19 +84,9 @@ namespace WebBiblioteca.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Autores_Autoresid",
-                table: "Autores",
-                column: "Autoresid");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Autores_editoraID",
                 table: "Autores",
                 column: "editoraID");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Editora_Editoraid",
-                table: "Editora",
-                column: "Editoraid");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Livros_AutorId",
@@ -125,7 +101,7 @@ namespace WebBiblioteca.Migrations
                 name: "Livros");
 
             migrationBuilder.DropTable(
-                name: "Usuarios");
+                name: "LoginViewModels");
 
             migrationBuilder.DropTable(
                 name: "Autores");

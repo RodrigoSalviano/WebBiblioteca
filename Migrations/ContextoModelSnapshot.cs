@@ -50,9 +50,6 @@ namespace WebBiblioteca.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
 
-                    b.Property<int?>("Livrosid")
-                        .HasColumnType("int");
-
                     b.Property<int>("editoraID")
                         .HasColumnType("int");
 
@@ -68,8 +65,6 @@ namespace WebBiblioteca.Migrations
 
                     b.HasKey("id");
 
-                    b.HasIndex("Livrosid");
-
                     b.HasIndex("editoraID");
 
                     b.ToTable("Autores");
@@ -83,17 +78,12 @@ namespace WebBiblioteca.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
 
-                    b.Property<int?>("Autoresid")
-                        .HasColumnType("int");
-
                     b.Property<string>("nome")
                         .IsRequired()
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
 
                     b.HasKey("id");
-
-                    b.HasIndex("Autoresid");
 
                     b.ToTable("Editora");
                 });
@@ -130,7 +120,6 @@ namespace WebBiblioteca.Migrations
                         .HasColumnType("nvarchar(120)");
 
                     b.Property<int>("volume")
-                        .HasMaxLength(3)
                         .HasColumnType("int");
 
                     b.HasKey("id");
@@ -142,10 +131,6 @@ namespace WebBiblioteca.Migrations
 
             modelBuilder.Entity("WebBiblioteca.Models.Autores", b =>
                 {
-                    b.HasOne("WebBiblioteca.Models.Livros", null)
-                        .WithMany("listaAutores")
-                        .HasForeignKey("Livrosid");
-
                     b.HasOne("WebBiblioteca.Models.Editora", "Editora")
                         .WithMany()
                         .HasForeignKey("editoraID")
@@ -153,13 +138,6 @@ namespace WebBiblioteca.Migrations
                         .IsRequired();
 
                     b.Navigation("Editora");
-                });
-
-            modelBuilder.Entity("WebBiblioteca.Models.Editora", b =>
-                {
-                    b.HasOne("WebBiblioteca.Models.Autores", null)
-                        .WithMany("listaEditora")
-                        .HasForeignKey("Autoresid");
                 });
 
             modelBuilder.Entity("WebBiblioteca.Models.Livros", b =>
@@ -171,16 +149,6 @@ namespace WebBiblioteca.Migrations
                         .IsRequired();
 
                     b.Navigation("Autor");
-                });
-
-            modelBuilder.Entity("WebBiblioteca.Models.Autores", b =>
-                {
-                    b.Navigation("listaEditora");
-                });
-
-            modelBuilder.Entity("WebBiblioteca.Models.Livros", b =>
-                {
-                    b.Navigation("listaAutores");
                 });
 #pragma warning restore 612, 618
         }

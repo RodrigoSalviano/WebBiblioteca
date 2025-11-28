@@ -25,8 +25,21 @@ namespace WebBiblioteca.Models
         public virtual Editora Editora { get; set; }
 
         [Display(Name = "Lista de Editoras")]
-        public List<Editora> listaEditora { get; set; }
+        [NotMapped]
+        public List<Editora> listaEditora { get; set; } = new List<Editora>();
 
-        public Autores() { }
+        public Autores() {
+            nome = string.Empty;
+            nacionalidade = string.Empty;
+            listaEditora = new List<Editora>();
+        }
+
+        public Autores(int id, string nome, string nacionalidade)
+        {
+            this.id = id;
+            this.nome = nome;
+            this.nacionalidade = nacionalidade;
+            listaEditora = new List<Editora>();
+        }
     }
 }
