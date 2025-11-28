@@ -11,7 +11,7 @@ using WebBiblioteca.Models;
 namespace WebBiblioteca.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20251126152734_Inicial")]
+    [Migration("20251128022754_Inicial")]
     partial class Inicial
     {
         /// <inheritdoc />
@@ -24,7 +24,7 @@ namespace WebBiblioteca.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("WebBiblioteca.Models.Autores", b =>
+            modelBuilder.Entity("LoginViewModel", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
@@ -32,8 +32,26 @@ namespace WebBiblioteca.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
 
-                    b.Property<int?>("Autoresid")
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("id");
+
+                    b.ToTable("LoginViewModels");
+                });
+
+            modelBuilder.Entity("WebBiblioteca.Models.Autores", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
 
                     b.Property<int>("editoraID")
                         .HasColumnType("int");
@@ -50,8 +68,6 @@ namespace WebBiblioteca.Migrations
 
                     b.HasKey("id");
 
-                    b.HasIndex("Autoresid");
-
                     b.HasIndex("editoraID");
 
                     b.ToTable("Autores");
@@ -65,17 +81,12 @@ namespace WebBiblioteca.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
 
-                    b.Property<int?>("Editoraid")
-                        .HasColumnType("int");
-
                     b.Property<string>("nome")
                         .IsRequired()
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
 
                     b.HasKey("id");
-
-                    b.HasIndex("Editoraid");
 
                     b.ToTable("Editora");
                 });
@@ -112,7 +123,6 @@ namespace WebBiblioteca.Migrations
                         .HasColumnType("nvarchar(120)");
 
                     b.Property<int>("volume")
-                        .HasMaxLength(3)
                         .HasColumnType("int");
 
                     b.HasKey("id");
@@ -122,44 +132,8 @@ namespace WebBiblioteca.Migrations
                     b.ToTable("Livros");
                 });
 
-            modelBuilder.Entity("WebBiblioteca.Models.Usuario", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
-
-                    b.Property<string>("acesso")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("email")
-                        .IsRequired()
-                        .HasMaxLength(120)
-                        .HasColumnType("nvarchar(120)");
-
-                    b.Property<string>("nome")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("senha")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.HasKey("id");
-
-                    b.ToTable("Usuarios");
-                });
-
             modelBuilder.Entity("WebBiblioteca.Models.Autores", b =>
                 {
-                    b.HasOne("WebBiblioteca.Models.Autores", null)
-                        .WithMany("listaAutores")
-                        .HasForeignKey("Autoresid");
-
                     b.HasOne("WebBiblioteca.Models.Editora", "Editora")
                         .WithMany()
                         .HasForeignKey("editoraID")
@@ -167,13 +141,6 @@ namespace WebBiblioteca.Migrations
                         .IsRequired();
 
                     b.Navigation("Editora");
-                });
-
-            modelBuilder.Entity("WebBiblioteca.Models.Editora", b =>
-                {
-                    b.HasOne("WebBiblioteca.Models.Editora", null)
-                        .WithMany("listaEditora")
-                        .HasForeignKey("Editoraid");
                 });
 
             modelBuilder.Entity("WebBiblioteca.Models.Livros", b =>
@@ -185,16 +152,6 @@ namespace WebBiblioteca.Migrations
                         .IsRequired();
 
                     b.Navigation("Autor");
-                });
-
-            modelBuilder.Entity("WebBiblioteca.Models.Autores", b =>
-                {
-                    b.Navigation("listaAutores");
-                });
-
-            modelBuilder.Entity("WebBiblioteca.Models.Editora", b =>
-                {
-                    b.Navigation("listaEditora");
                 });
 #pragma warning restore 612, 618
         }
