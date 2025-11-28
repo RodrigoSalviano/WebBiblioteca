@@ -7,6 +7,10 @@ namespace WebBiblioteca.Models
     [Table("Livros")]
     public class Livros
     {
+        internal int editora;
+        internal int id_editora;
+        internal int id_autor;
+
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id { get; set; }
